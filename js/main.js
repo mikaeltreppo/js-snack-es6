@@ -42,12 +42,7 @@ console.log(weigth);
 
 
 //ciclo i valori ottenuti da prima per constataee il minore
-let min = 1000;
-for (let i = 0; i < weigth.length; i++) {
-
-    if (weigth[i] < min) {
-        min = weigth[i];
-    }
-}
-
-  console.log("la bici che pesa di meno pesa : " + min + "kg");
+let min = Math.min(...weigth); 
+let pos = weigth.findIndex( kg => kg === min);
+console.log(pos);
+console.log("la bici che pesa di meno pesa è : " + bikes[pos].brand +" di kg "+  bikes[pos].kg  +" colore "+  bikes[pos].color);
